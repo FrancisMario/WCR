@@ -1,0 +1,34 @@
+class ArticleViewCard extends StatelessWidget {
+ final String id;
+ final String title;
+ final String image;
+ final String date;
+ final List<String> author;
+ final int views;
+ final int likes;
+ final int comments;
+
+  const ArticleViewCard({Key key,this.author, this.views, this.likes, this.comments, this.id, this.title, this.date, this.image}) : super(key: key);
+
+
+     factory ArticleViewCard.fromJson(Map<String, dynamic> json) {
+    return ArticleViewCard(
+      id: json['id'],
+      image: json['image'],
+      title: json['title'],
+      date: json['date'],
+      views: json['views'],
+      likes: json['likes'],
+      comments: json['comments'],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 200,
+      width: 200,
+      child:Row()
+    );
+  }
+}
