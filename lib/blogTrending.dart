@@ -89,7 +89,7 @@ class _BrowseBlogs extends State < BrowseBlogs > {
 
   Future < bool > fetchBrowse() async {
     print("getting data");
-    final response = await http.get('http://192.168.137.1/wcr-api/browse.php')
+    final response = await http.get('http://192.168.0.121/wcr-api/browse.php')
                       .timeout(Duration(seconds:15),onTimeout: (){
 
                       });
